@@ -7,6 +7,7 @@ const {authMiddleware} = require('./utils/auth');
 const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -38,6 +39,6 @@ const startApolloServer = async (typeDefs, resolvers) => {
   })
   };
   
-  //Start the server
+  
   startApolloServer(typeDefs, resolvers);
 
